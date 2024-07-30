@@ -127,7 +127,7 @@ func Checksum(ean string, size int) (int, error) {
 }
 
 func Ean13(barcode string) string {
-	if len(barcode) != 13 {
+	if len(barcode) == 13 {
 		barcode = "0" + barcode
 	}
 	var res strings.Builder
